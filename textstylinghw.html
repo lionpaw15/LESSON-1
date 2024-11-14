@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .text1{
+                color: red;
+                font-size: 30px;
+            }
+            div{
+                width: 300px;
+                height: 100px;
+                background-color: green;
+                border: 1px solid black;
+            }
+            #mydiv{
+                transform: rotateX(180deg);
+            }
+            h1{
+                text-decoration: overline;
+                text-transform: capitalize;
+            }
+            h2{
+                text-decoration: underline;
+                text-transform: uppercase;
+            }
+            h3{
+                text-decoration: line-through;
+                text-transform: lowercase;
+            }
+            h4{
+                text-decoration: underline overline;
+                text-decoration: none;
+            }
+            *{
+                text-align: center;
+                font-family: monospace;
+            }
+            #text{
+                text-shadow: 2px 2px 1px #cc5500;
+            }
+            #box{
+                box-shadow: 9px 9px 5px #301934;
+            }
+            #indent{
+                text-indent: 50%;//16px or -3em
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+        <mark>TOPOGRAPHY</mark>
+        <p class="text1">This is topography.</p>
+        </fieldset>
+        <fieldset>
+        <mark>TRANSFORM</mark>
+        <div>Rotating this words is as shown below...</div>
+        <div id="mydiv">Rotating this words is as shown below...</div>
+        </fieldset>
+        <Fieldset>
+            <mark>TEXT DECORATION</mark>
+            <h1>Emmanuel</h1>
+            <h2>Gachie</h2>
+            <h3>Kabue</h3>
+            <h4>Form Three</h4>
+        </Fieldset>
+        <fieldset>
+            <mark>TEXT-SHADOW</mark>
+            <p id="text">Text-shadowing can be used to attract the reader to read an important point.</p><br>
+            <p id="box">Box-shadow also has similar fucntions as text-shadow.</p><br>
+            <p id="text-indent">last but not least is text-indentation.</p>
+        </fieldset>
+    </body>
+</html>
