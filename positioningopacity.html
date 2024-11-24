@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+            div{
+                right: 30px;
+                border: 3px solid #1e46b4;
+            }
+            div.absolute{
+                position: absolute;
+                left: 50px;
+                border: 3px solid green;
+            }
+            div.relative{
+                position: relative;
+                left: 100px;
+                border: 3px solid #1e46b4;
+            }
+            div.fixed{
+                position: fixed;
+                top: 0px;
+                right: 20px;
+                width: 300px;
+                border: 3px solid #1e46b4;
+            }
+            div.sticky{
+                position: sticky;
+                top: 1px;
+                right: 20px;
+                width: 100px;
+                border: 3px solid #1e46b4;
+            }
+            div{
+                background-color: #11ccbc;
+                padding: 10px;
+            }
+            div.first{
+                opacity: 0.1;
+            }
+            div.second{
+                opacity: 0.3;
+            }
+            div.third{
+                opacity: 0.6;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>POSITIONING</h2>
+        <div>Div with no position property</div>
+        <div class="sticky">division with sticky property</div>
+        <div>
+            This division element has position: relative;
+            <div class="absolute">ABSOLUTE class division</div>
+        </div>
+        <div class="fixed">Division with FIXED property</div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1>The Opacity Property</h1>
+        <p>This is how this property looks:</p>
+        <div class="first">Opacity 0.1</div>
+        <div class="second">Opacity 0.3</div>
+        <div class="third">Opacity0.6</div>
+        <div>
+            <p>Opacity 1(default)</p>
+        </div>
+    </body>
+</html>
