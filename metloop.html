@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body style="color: green;">
+        <p id="demo"></p>
+        <script>
+            var str = "CoNtRoL";
+                document.write(str.toUpperCase());
+                document.write("<br>");
+                document.write(str.toLowerCase());
+                document.write("<br>");
+                document.write(str.startsWith('t'));
+                document.write("<br>");
+                //test method -> returns true or false
+                var str1 = "I learnt about methods";
+                var patt = new RegExp("learnt");
+                var res = patt.test(str);
+                document.write(res);
+                 var cars = ["BMW", "Toyota", "Jeep", "Mercedes", "Lamborgini", "Konegzeg"];
+                    var text = "";
+                    var i;
+                    for (i = 0; i < cars.length; i++) { text += cars[i] + "<br>"; }
+                    document.getElementById("demo").innerHTML = text;
+        </script>
+    </body>
+</html>
