@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Data Structure and Array</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript: Object Data Structure and Array</h1>
+    <h2>Results:</h2>
+    <pre id="output"></pre>
+
+    <script>
+        function main() {
+            const outputElement = document.getElementById('output');
+            let result = "";
+
+            // Step 1: Create an object and display its properties using keys
+            const person = {
+                name: "Alice",
+                age: 25,
+                occupation: "Developer"
+            };
+
+            result += "Object Properties:\n";
+            result += `Name: ${person.name}\n`;
+            result += `Age: ${person.age}\n`;
+            result += `Occupation: ${person.occupation}\n\n`;
+
+            // Step 2: Create an array and display its elements using indices
+            const colors = ["Red", "Green", "Blue", "Yellow"];
+            result += "Array Elements:\n";
+            colors.forEach((color, index) => {
+                result += `Index ${index}: ${color}\n`;
+            });
+
+            result += "\n";
+
+            // Step 3: Display the array as a string using the join function
+            result += "Array as a String (joined by ', '):\n";
+            result += `${colors.join(", ")}\n\n`;
+
+            // Step 4: Remove the last element of the array using pop
+            const removedColor = colors.pop();
+            result += "Array after using pop():\n";
+            result += `${colors.join(", ")}\n`;
+            result += `Removed Element: ${removedColor}\n`;
+
+            // Display the results
+            outputElement.textContent = result;
+        }
+
+        // Run the main function
+        main();
+    </script>
+</body>
+
+</html>
