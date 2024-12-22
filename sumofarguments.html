@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of Arguments and Trigonometric Values</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript: Sum of Arguments and Trigonometric Values</h1>
+    <h2>Results:</h2>
+    <pre id="output"></pre>
+
+    <script>
+        // Function to calculate the sum of arguments
+        function sumOfArguments(...args) {
+            return args.reduce((sum, current) => sum + current, 0);
+        }
+
+        // Function to convert degrees to radians
+        function degreesToRadians(degrees) {
+            return degrees * (Math.PI / 180);
+        }
+
+        // Function to print trigonometric values for a given angle in degrees
+        function getTrigValues(degrees) {
+            const radians = degreesToRadians(degrees);
+            return `
+Sine(${degrees}°): ${Math.sin(radians).toFixed(4)}
+Cosine(${degrees}°): ${Math.cos(radians).toFixed(4)}
+Tangent(${degrees}°): ${Math.tan(radians).toFixed(4)}`;
+        }
+
+        // Main execution
+        function main() {
+            const outputElement = document.getElementById('output');
+
+            // Example usage of the sumOfArguments function
+            const sum = sumOfArguments(10, 20, 30, 40);
+            let result = `Sum of Arguments: ${sum}\n`;
+
+            // Example usage of the printTrigValues function
+            result += `\nTrigonometric Values:\n`;
+            result += getTrigValues(30);
+            result += getTrigValues(45);
+            result += getTrigValues(60);
+
+            // Display the result in the HTML
+            outputElement.textContent = result;
+        }
+
+        // Run the main function
+        main();
+    </script>
+</body>
+</html>
