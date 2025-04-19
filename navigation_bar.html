@@ -3,10 +3,14 @@
     <head>
         <title>Navigation bar</title>
         <style>
+            #box{
+                box-shadow: 9px 9px 5px #4a0b55;
+                /*(right offset)px (left offset)px (fade)px color*/
+            }
             body {
                 margin: 0;
                 font-family: Arial, Helvetica, sans-serif;
-                background-color: pink;
+                background-color: black;
             }
 
             .topnav {
@@ -29,9 +33,25 @@
                 background-color: #ffe066;
                 color: blue;
             }
+            h2 {
+                text-transform: capitalize;
+                color: blue;
+                text-decoration: underline;
+            }
+            h3 {
+                text-decoration: underline;
+                color: green;
+            }
+            p {
+                color: white;
+            }
+            h1 {
+                color: yellow;
+            }
         </style>
     </head>
     <body>
+        <center><h1 id="box">DINNER'S PIZZA🍕</h1></center>
         <div class="topnav">
             <a class="active" href="navigation_bar.html">Home</a>
             <a href="aboutus.html">About us</a>
@@ -41,5 +61,48 @@
         </div>
 
         <strong>I am in home page</strong>
+        <!--Slide show-->
+        <div>
+            <img class="mySlides" src="pizza 1.jpg" style="height: 500px;width: 400px;">
+            <img class="mySlides" src="pizza 2.jpg" style="height: 500px;width: 400px;">
+            <img class="mySlides" src="pizza 3.jpg" style="height: 500px;width: 400px;">
+            <img class="mySlides" src="pizza 4.jpg" style="height: 500px;width: 400px;">
+        </div>
+        <script>
+            var myIndex =0;
+            carousel();
+            //Atumatic slide show - change image every 3 seconds
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    // executed for only 012
+                    x[i].style.display = "none"
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}
+                //myindex=0 1 2 3 for index 3 comeback again to 1
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 3000);
+                //calling function every 3 seconds
+            }
+        </script>
+        <h2>TYPES OF PIZZA AND WAYS OF MAKING</h2>
+        
+
+        <p>Links to various pictures and their explamation are as follows;</p><br>
+        <center><h3>HOMEMADE RECIPE</h3></center>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XKC62IFnH2s?si=7Qos3-3WkbJRr8mI"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br>
+            <center><h3>STREET STYLE</h3></center>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VZU-EyQfUXQ?si=qXyRGvFGNPedW906"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
     </body>
 </html>
